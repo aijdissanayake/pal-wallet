@@ -92,11 +92,10 @@ function startMining() {
           verifyString = new Array(tx.difficulty + 1).join('0');
           nonce = new BN('0');;
           startDate = new Date();
-          
           // Do work once first
-          if (tx.validated) {
+          // if (tx.validated) {
             hash = SHA256(tx.transaction + nonce.toString()).toString();
-          }
+          // }
           // Switch state to do hashing
           state = STATE_HASHING;
         }
