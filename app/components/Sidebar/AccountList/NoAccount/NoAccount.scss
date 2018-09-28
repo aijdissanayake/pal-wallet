@@ -1,0 +1,12 @@
+@import '~styles/variables';
+
+.noAccount {
+  padding: 15px 10px;
+  background-color: $alice-blue;
+  color: $title-color;
+
+  :global(p) {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}

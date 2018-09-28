@@ -1,0 +1,32 @@
+p {
+  margin: 0;
+}
+
+.badge {
+  padding: 5px;
+}
+
+.anchorLink {
+  display: inline-block;
+  cursor: pointer;
+  color: darken(#479efb, 0%);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.border {
+  min-height: 50px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.border:nth-of-type(even) { margin-right: 0; }
+.border:nth-of-type(odd) { margin-left: 0; }

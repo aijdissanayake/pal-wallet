@@ -1,0 +1,97 @@
+@import '~styles/variables';
+
+.dashboard {
+  padding-left: 10px;
+  overflow-y: auto;
+
+  h2 {
+    margin: 50px 0;
+  }
+
+  .account {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 30px;
+    margin: 10px !important;
+    transform: translateX(-10px);
+    word-break: break-word;
+
+    &:hover {
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+    }
+  }
+
+  .name {
+    max-width: calc(100% - 30px);
+  }
+
+  .editIcon {
+    position: absolute;
+    right: 30px;
+  }
+
+  hr {
+    border: none;
+    background-color: $light-steel-blue;
+    height: 1px;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  &>[class*="col-"] {
+    margin-bottom: 10px;
+  }
+}
+
+.border {
+  margin: 10px !important;
+  transform: translateX(-10px);
+}
+
+.createAccount {
+  width: 700px;
+  max-width: 100%;
+  margin: auto !important;
+  padding: 20px 0 0 0;
+
+  .create {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 1px;
+    background-color: $light-steel-blue;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &>[class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 10px !important;
+
+    @media screen and (max-width: 992px) {
+      padding: 10px !important;
+    }
+  }
+}
+
+.import {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  transform: translateY(5px);
+
+  @media screen and (max-width: 992px) {
+    position: relative;
+    margin-bottom: 10px;
+    transform: translateY(0px);
+  }
+}

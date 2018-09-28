@@ -1,0 +1,19 @@
+@import '~styles/variables';
+
+.wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: $body-bg;
+}
+
+.content {
+  margin-right: 0;
+  margin-left: 230px;
+  background-color: $body-bg;
+  padding-top: ($grid-gutter-width / 2);
+  padding-bottom: ($grid-gutter-width / 2);
+  z-index: 10;
+}

@@ -1,0 +1,10 @@
+@import '~styles/variables';
+
+.notificationContainer {
+  display: block;
+  position: fixed;
+  z-index: $zindex-tooltip;
+  top: $grid-gutter-width;
+  right: $grid-gutter-width;
+  margin-top: ($grid-gutter-width / 2);
+}

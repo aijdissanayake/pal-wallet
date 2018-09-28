@@ -1,0 +1,29 @@
+@import '~styles/variables';
+
+.help {
+  border-top: $border-width solid $border-color;
+
+  //.menu .nav-link
+  :global(.nav-link) {
+    transition: $transition-base;
+    color: $secondary;
+
+    //.menu .nav-link.active
+    &:global(.active) {
+      border-left: 4px solid $secondary;
+      background-color: $alice-blue;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    //.menu .nav-link .fa
+    :global([class*="fa"]) {
+      margin-right: 5px;
+    }
+  }
+
+  // .help__link
+  #{&}__link {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,74 @@
+// Subheader, body
+$color-body: #46737A;
+$color-filter-body: brightness(0) saturate(100%) invert(44%) sepia(11%) saturate(1407%) hue-rotate(140deg) brightness(89%) contrast(83%);
+
+// Lines, outlines, boxes drawings
+$color-line: #C8E0E4;
+$color-filter-line: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(920%) hue-rotate(154deg) brightness(92%) contrast(94%);
+
+// Hover, Highlight, Very important Interaction, Links
+$color-hover: #00D7AF;
+$color-filter-hover: brightness(0) saturate(100%) invert(78%) sepia(45%) saturate(5238%) hue-rotate(121deg) brightness(96%) contrast(101%);
+
+// Color error
+$color-error: #ffa0b1;
+$color-filter-error: brightness(0) saturate(100%) nvert(70%) sepia(4%) saturate(3156%) hue-rotate(301deg) brightness(98%) contrast(115%);
+
+// Color error 2
+$color-error-alt: #ff6779;
+$color-filter-error: brightness(0) saturate(100%) invert(59%) sepia(11%) saturate(5978%) hue-rotate(313deg) brightness(100%) contrast(101%);
+
+$color-error-alt-2: #d0021b;
+$color-filter-error-alt-2: brightness(0) saturate(100%) invert(21%) sepia(71%) saturate(4228%) hue-rotate(342deg) brightness(76%) contrast(121%);
+
+$before-color-medium: linear-gradient(180deg, $color-hover, $color-body);
+$after-color-medium: linear-gradient(180deg, $color-hover, $color-hover);
+$active-color-medium: linear-gradient(180deg, $color-line, $color-line);
+
+$before-active-medium: linear-gradient(180deg, $color-error-alt-2, $color-error);
+$after-active-medium: linear-gradient(180deg, $color-error-alt-2, $color-error-alt-2);
+$active-active-medium: linear-gradient(180deg, $color-error-alt, $color-error-alt);
+
+%noOutline {
+  &:active,
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.greenBtn {
+  @extend %noOutline;
+  color: white;
+  background-image: $before-color-medium;
+  &:hover {
+    background-image: $after-color-medium;
+  }
+  &:active {
+    background-image: $active-color-medium;
+  }
+  outline: none;
+}
+
+.miningBtnIdle {
+  @extend %noOutline;
+  background-image: $before-color-medium;
+  &:hover {
+    background-image: $after-color-medium;
+  }
+  &:active {
+    background-image: $active-color-medium;
+  }
+}
+
+.miningBtnActive {
+  @extend %noOutline;
+  background-image: $before-active-medium;
+  &:hover {
+    background-image: $after-active-medium;
+  }
+  &:active {
+    background-image: $active-active-medium;
+  }
+}
+

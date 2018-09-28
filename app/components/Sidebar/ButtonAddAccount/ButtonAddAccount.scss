@@ -1,0 +1,9 @@
+.buttonAddAccount {
+  float: right;
+
+  > :global(.btn) {
+    padding: 0.15rem !important;
+    width: 25px;
+    height: 25px;
+  }
+}

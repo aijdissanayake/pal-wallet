@@ -1,0 +1,21 @@
+@import '~styles/variables';
+
+.menu {
+  //.menu .nav-link
+  :global(.nav-link) {
+    transition: $transition-base;
+
+    //.menu .nav-link.active
+    &:global(.active) {
+      border-left: 4px solid $primary;
+      background-color: $alice-blue;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    //.menu .nav-link .fa
+    :global(.fa), :global(.fab) {
+      margin-right: 5px;
+    }
+  }
+}

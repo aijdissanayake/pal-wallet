@@ -1,0 +1,276 @@
+@import '~styles/variables';
+@import '~styles/buttons';
+
+.supernode {
+  padding-left: 10px;
+  overflow-y: auto;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .unregistered {
+    height: 300px;
+    padding: 50px !important;
+    text-align: center;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+    a {
+      margin-top: 5px;
+    }
+  }
+
+  .statistics {
+    margin: auto;
+    width: 100%;
+
+    .stat {
+      padding: 10px 40px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      flex: 0 0 100%;
+
+      @media screen and (min-width: 800px) {
+        flex: 0 0 50%;
+      }
+
+      @media screen and (min-width: 1068px) {
+        flex: 1;
+      }
+
+      span:nth-of-type(1) {
+        width: 90px;
+        margin-right: 20px;
+      }
+      span:nth-of-type(2) {
+        font-size: $h4-font-size;
+        font-weight: $headings-font-weight;
+        color: $gray-700;
+      }
+    }
+  }
+
+  .nodeStatus {
+    span {
+      padding: 0 40px;
+      flex: 1;
+      text-align: left;
+    }
+    button {
+      float: right;
+      max-width: 10rem !important;
+      padding: 1.063rem 0.5rem;
+      transform: translateX(-20px);
+    }
+  }
+
+  .accountDropDown {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    transform: translateY(-3px);
+    z-index: 99;
+
+    @media screen and (max-width: 590px) {
+      position: relative;
+      justify-content: flex-start;
+    }
+
+    .dropdownToggle {
+      height: auto;
+      width: auto;
+      min-width: 100px;
+      padding: 0 10px 0 10px;
+      background-color: transparent !important;
+      color: $east-bay !important;
+      font-family: 'Kiona';
+      font-weight: 600;
+      font-size: 24px;
+
+      @media screen and (max-width: 590px) {
+        padding: 0 10px 0 0;
+      }
+
+      &:after {
+        height: 6px;
+        width: 8px;
+        margin-left: 0.5rem;
+        border-top: 0.5rem solid;
+      }
+
+      @extend %noOutline;
+      &:active,
+      &:focus {
+        background-color: transparent !important;
+        color: $east-bay !important;
+      }
+    }
+
+    .dropdownMenu {
+      border-radius: 0;
+      button {
+        @extend %noOutline;
+      }
+    }
+
+    .accountLogo {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-image: linear-gradient(140deg, $color-hover, $color-error-alt);;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: white;
+      }
+    }
+  }
+
+  .workers {
+    padding: 10px 40px;
+  }
+
+  .packageDetailContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 250px;
+    overflow-y: auto;
+    padding: 0;
+
+    .packageDetail {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      &:nth-of-type(even) {
+        background-color: rgb(233, 233, 233);
+      }
+
+      .bar {
+        width: 6px;
+        min-height: 80px;
+      }
+
+      .packageLogo {
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+      }
+
+      .packageLogoPass {
+        color: $color-hover;
+      }
+
+      .packageLogoFail {
+        color: $color-error-alt-2;
+      }
+
+      .colPass {
+        background-color: $color-hover;
+      }
+
+      .colFail {
+        background-color: $color-error-alt-2;
+      }
+
+      .packageInfo {
+        width: calc((100% - 50px) * 0.7);
+        p {
+          font-size: 14px;
+          font-weight: 700;
+        }
+        .anchorLink {
+          font-size: 11px !important;
+        }
+        span {
+          font-size: 10px;
+        }
+      }
+
+      .packageReward {
+        padding-right: 20px;
+        float: right;
+        width: calc((100% - 50px) * 0.3);
+        p {
+          font-size: 14px;
+          color: $color-hover;
+          float: right;
+          text-align: right;
+        }
+
+        .packageTime {
+          font-size: 10px;
+          color: grey;
+          float: right;
+        }
+      }
+    }
+  }
+
+  .packageDetails {
+    padding: 0;
+
+    .header {
+      padding: 10px 0;
+    }
+
+    .detailItem {
+      padding: 5px 20px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      span:nth-of-type(1) {
+        min-width: 70px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      span:nth-of-type(2) {
+        font-size: 12px;
+      }
+
+      .colPass {
+        color: $color-hover;
+      }
+
+      .colFail {
+        color: $color-error-alt-2;
+      }
+    }
+
+    .timeStamp {
+      padding-left: 40px;
+    }
+
+    .table {
+      table-layout: fixed;
+      word-break: break-all;
+    }
+
+    .detailTable {
+      max-height: 250px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+
+      th {
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  &>[class*="col-"] {
+    display: flex;
+    flex-direction: column;
+  }
+}

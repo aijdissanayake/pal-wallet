@@ -1,0 +1,39 @@
+@import '~styles/variables';
+
+.mainHeader {
+  position: relative;
+  z-index: 25;
+  background-color: transparent;
+  margin-right: 0;
+  margin-left: 230px;
+  transition: transform .3s ease-in-out, width .3s ease-in-out;
+
+}
+
+.content {
+  padding-top: ($grid-gutter-width / 2);
+  padding-bottom: ($grid-gutter-width / 2);
+}
+
+.blockInfos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.blockInfo {
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  // blockInfo__value
+  &__value {
+    margin-left: ($grid-gutter-width / 3);
+    font-weight: bold;
+    color: $title-color;
+  }
+}
+
+

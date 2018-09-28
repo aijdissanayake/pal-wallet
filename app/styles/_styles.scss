@@ -1,0 +1,20 @@
+// My Bootstrap configuration
+@import 'variables';
+
+// Bootstrap library
+@import '~bootstrap/scss/bootstrap';
+
+// Here you can import more .scss files or write scss code.
+@import 'fonts';
+
+// custom component bootstrap
+@import 'bootstrap/buttons';
+@import 'bootstrap/inputs';
+@import 'bootstrap/forms';
+@import 'bootstrap/modal';
+
+// Common styles
+@import 'custom';
+
+// Button styles
+@import 'buttons';

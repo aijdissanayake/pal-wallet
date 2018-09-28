@@ -1,0 +1,21 @@
+@import '~styles/variables';
+
+.form-group {
+  > label {
+    font-size: larger;
+    font-weight: bold;
+    color: $title-color;
+    margin-bottom: 0.625rem;
+  }
+
+
+  > [class$="-feedback"] {
+    display: block;
+    opacity: 0;
+    transition: $transition-base;
+  }
+
+  .form-control.is-invalid ~ .invalid-feedback {
+    opacity: 1;
+  }
+}

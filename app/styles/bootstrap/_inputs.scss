@@ -1,0 +1,66 @@
+@import '~styles/variables';
+
+.form-control {
+  // .form-control:focus, .form-control:hover
+  &:focus, &:hover {
+    outline: none;
+  }
+}
+
+.custom-control {
+  min-height: $custom-control-gutter;
+
+  // .custom-control-label
+  &-label {
+    color: $light-steel-blue;
+    outline: none;
+
+    // .custom-control-label::before
+    &::before {
+      border: solid 1px $light-steel-blue;
+      background-color: $white;
+    }
+  }
+
+
+
+  .custom-control-input {
+    // .custom-control-input:active
+    &:active {
+      ~ .custom-control-label::before {
+        background-color: $white;
+      }
+    }
+
+    // .custom-control-input:focus
+    &:focus {
+      // .custom-control-input:focus ~ .custom-control-label::before
+      ~ .custom-control-label::before {
+        box-shadow: 0 0 0 1px $body-bg, 0 0 0 $input-focus-width rgba($regent-blue, .25);
+      }
+    }
+
+    // .custom-control-input:checked
+    &:checked {
+      // .custom-control-input:checked ~ .custom-control-label
+      ~ .custom-control-label {
+        color: $bermuda-grey;
+
+        // .custom-control-input:checked::before
+        &::before {
+          background-image: linear-gradient(to top, $portage, $regent-blue);
+          background-color: $portage;
+        }
+      }
+    }
+
+    // .custom-control-input:disabled
+    &:disabled {
+      // .custom-control-input:disabled ~ .custom-control-label::before
+      ~ .custom-control-label::before {
+        background-color: $custom-control-indicator-checked-disabled-bg;
+      }
+    }
+  }
+
+}

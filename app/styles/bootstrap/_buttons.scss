@@ -1,0 +1,39 @@
+@import '~styles/variables';
+
+.btn {
+  max-width: 100%;
+
+  // .btn:not([class*="btn-outline"])
+  &:not([class*="btn-outline"]) {
+    border-width: 0;
+  }
+
+  &.ppn {
+    width: $btn-width;
+  }
+
+  // .btn[disabled]
+  &[disabled] {
+    background-color: $light-steel-blue;
+    background-image: none;
+    color: #fff;
+    opacity: 1;
+
+    // .btn[disabled][class*="btn-outline"]
+    &[class*="btn-outline"] {
+      border-color: $light-steel-blue;
+    }
+  }
+}
+
+
+.btn-primary:not([disabled]) {
+  background-image: linear-gradient(to bottom, $caribbean-green, $east-bay);
+
+  // .btn-primary:not([disabled]):focus, btn-primary:not([disabled]):hover
+  &:focus, &:hover {
+    background-image: linear-gradient(to bottom, $caribbean-green-dark, $east-bay-dark);
+  }
+}
+
+

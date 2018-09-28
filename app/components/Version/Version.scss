@@ -1,0 +1,11 @@
+@import '~styles/variables';
+
+.version {
+  display: block;
+  margin: ($grid-gutter-width / 2);
+  margin-top: 0;
+}
+
+.currentVersion {
+  color: $gray-500;
+}

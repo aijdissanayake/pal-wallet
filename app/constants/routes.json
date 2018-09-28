@@ -1,0 +1,5 @@
+{
+  "HOME": "/",
+  "SUPERNODE": "/supernode",
+  "ACCOUNT_DETAIL": "/account/:address"
+}

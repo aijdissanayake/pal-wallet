@@ -1,0 +1,139 @@
+@import '~styles/variables';
+
+.transaction {
+  background-color: $white;
+  display: flex;
+  flex-flow: row;
+  padding: ($grid-gutter-width / 2);
+  cursor: pointer;
+
+  &:nth-of-type(odd) {
+    background-color: $gray-100;
+  }
+
+  &:hover {
+    background-color: rgba($gray-100, 0.5);
+  }
+}
+
+.status {
+  position: relative;
+  padding-left: 40px;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // .status__icon
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    :global([class^="fa"]) {
+      font-size: 2rem;
+    }
+
+    @at-root :global(.successful) & {
+      color: $green;
+    }
+    @at-root :global(.failed) & {
+      color: $red;
+    }
+  }
+
+  // .status__text
+  &__text {
+    margin-bottom: 0;
+    color: $title-color;
+    font-weight: bolder;
+  }
+
+  // .status__time
+  &__time {
+    font-size: smaller;
+    margin-bottom: 0;
+    color: $caption-color;
+  }
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+
+  // .info__content
+  &__content {
+    text-align: center;
+  }
+
+  // .info__txHash
+  &__txHash {
+    display: inline-block;
+    color: $primary;
+    padding-right: 10px;
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+
+  // .info__delete
+  &__delete {
+    border: none;
+    display: inline-block;
+    color: $red;
+    font-size: 18px;
+    transition: font-size 0.3s ease;
+    &:hover {
+      font-size: 20px;
+    }
+    &:active {
+      color: $light-steel-blue;
+    }
+  }
+
+  // .info__transference
+  &__transference {
+    font-size: smaller;
+    color: $sub-header-color;
+  }
+
+  // .info__direction
+  &__direction {
+    font-size: smaller;
+    color: $sub-header-color;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.amount {
+  color: $title-color;
+  align-self: center;
+  font-weight: 600;
+  word-break: break-all;
+
+  :global(.sent) &, :global(.received) & {
+    &::before {
+      display: inline-block;
+    }
+  }
+
+  :global(.sent) & {
+    color: $red;
+
+    &::before {
+      content: '-';
+    }
+  }
+
+  :global(.received) & {
+    color: $green;
+
+    &::before {
+      content: '+';
+    }
+  }
+}

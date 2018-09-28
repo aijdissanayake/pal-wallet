@@ -1,0 +1,40 @@
+@import '~styles/variables';
+
+.account {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 15px 10px;
+  user-select: none;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover, &:focus {
+    color: $title-color;
+    background-color: rgba($alice-blue, 0.4);
+  }
+
+  &:local(.active) {
+    background-color: $alice-blue;
+    color: $title-color;
+  }
+
+  // .account__info
+  &__info {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10px;
+  }
+
+  // .account__name
+  &__name {
+    font-weight: 600;
+  }
+
+  // .account__balance
+  &__balance {
+    font-weight: 300;
+    font-size: smaller;
+    word-break: break-word;
+  }
+}

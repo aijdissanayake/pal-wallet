@@ -1,0 +1,49 @@
+@import '~styles/variables';
+
+.modal {
+  // .modal-backdrop
+  &-backdrop {
+    background-image: linear-gradient(to top, $portage, $regent-blue);
+  }
+
+  // .modal-content
+  &-content {
+    box-shadow: $modal-content-box-shadow-sm-up;
+  }
+
+  // .modal-header
+  &-header {
+    .close:not(:disabled):not(.disabled) {
+      position: absolute;
+      padding: 0;
+      top: 1.875rem;
+      right: 1.875rem;
+      color: $regent-blue;
+
+      &:hover, &:focus {
+        color: $regent-blue;
+        outline: none !important;
+      }
+    }
+
+    button {
+      position: relative !important;
+      right: 0 !important;
+      top: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+
+      span {
+        position: absolute !important;
+        bottom: 0 !important;
+        outline: none !important;
+      }
+    }
+  }
+
+  // .modal-header
+  &-footer {
+    padding-bottom: $modal-edge-padding;
+    justify-content: center;
+  }
+}
