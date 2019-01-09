@@ -1,4 +1,4 @@
-# PAL Wallet
+# PAL Wallet For TESTNET PALLAS
 The wallet enables users to connect to PAL Network protocol and
 perform normal user transactions and wallet functions. This wallet
 also incorporate SuperNode functionalities.
